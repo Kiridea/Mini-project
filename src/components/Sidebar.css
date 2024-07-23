@@ -2,11 +2,17 @@
     width: 20%;
     height: 80vh;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.533);
+    background-color: rgba(118, 23, 105, 0.6);
     color: white;
     border-top-right-radius: 20px; 
     border-bottom-right-radius: 20px; 
     font-family: sans-serif;
+}
+#sidebar-container:hover {
+    width: 20.1%;
+    -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 hr {
@@ -24,10 +30,14 @@ hr {
     color: white;
     padding: 0.5em 1em;
     border-radius: 30px;
+    
 }
 
 #sidebar-container a:hover{
-    background-color: rgba(0, 0, 0, 0.633);
+    background-color: rgba(118, 23, 105, 0.411);
     transition: 300ms;
     transform: scale(1.1);
+    -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
 }
