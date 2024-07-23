@@ -10,7 +10,7 @@
 #button-container {
     width: 5.4vw;
     height: 5vh;
-    border: rgb(147, 143, 143) solid 1px;
+    border: solid  rgba(118, 23, 105, 0.6) 1px; 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -41,22 +41,26 @@
 }
 
 #Navbar h3{
+    font-size: 2em;
     margin-right: 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 300ms;
+    color:  rgba(118, 23, 105, 0.6);
   
 
 }
 
 #Navbar h3:hover{
-    font-size: 1.25em;
-    
-    
-   
-    
-  
+    font-size: 2.2em;
+    color:  rgba(175, 32, 156, 0.6);
+}
 
+#Navbar h3:hover::after{
+    font-size: 1em;
+    color: rgba(118, 23, 105, 0.6);
+    content: "/";
+    
 }

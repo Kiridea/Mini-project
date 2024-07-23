@@ -10,7 +10,7 @@ function Navbar() {
             <img className='hamburguer-icon' src={HamburguerMenu} alt="" />
             {/* <img className='default-user-icon' src={DefaultUser} alt="" /> */}
             </div>
-            <h3>Apartment's Logo</h3>
+            <h3>Habita </h3>
 
 
         </section>
