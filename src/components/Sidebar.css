@@ -1,0 +1,33 @@
+#sidebar-container {
+    width: 20%;
+    height: 80vh;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.533);
+    color: white;
+    border-top-right-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+    font-family: sans-serif;
+}
+
+hr {
+    margin-bottom: 0.5em;
+}
+
+#sidebar-items {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar-container a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+}
+
+#sidebar-container a:hover{
+    background-color: rgba(0, 0, 0, 0.633);
+    transition: 300ms;
+    transform: scale(1.1);
+}
