@@ -5,12 +5,12 @@ function ApartmentCard(props) {
     return (
 
         <li className="card">
+            <button onClick={()=>DeleteApartment(id)} id="delete-button">X</button>
             <img src={picture_url} alt="picture" />
             <div className="info">
                 <p>{host_location}</p>
                 <p>{host_neighbourhood}</p>
                 <p>{price}</p>
-                <button onClick={()=>DeleteApartment(id)} >X</button>
             </div>
         </li>
 
