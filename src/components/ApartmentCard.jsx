@@ -1,7 +1,7 @@
 import './ApartmentCard.css'
 
 function ApartmentCard(props) {
-    const { eachApartment: { picture_url, host_location, host_neighbourhood, price } } = props
+    const { eachApartment: { id, picture_url, host_location, host_neighbourhood, price }, DeleteApartment } = props
     return (
 
         <li className="card">
@@ -10,6 +10,7 @@ function ApartmentCard(props) {
                 <p>{host_location}</p>
                 <p>{host_neighbourhood}</p>
                 <p>{price}</p>
+                <button onClick={()=>DeleteApartment(id)} >X</button>
             </div>
         </li>
 
