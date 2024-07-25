@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import ApartmentList from './pages/ApartmentsList'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
+import About from './pages/About'
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
       <div id="main">
       <Sidebar />
       <Routes>
-        <Route path="/" element={<ApartmentList />}></Route>
+        <Route path="/" element={<ApartmentList />}/>
+        <Route path="/about" element={<About />}/>
       </Routes>
       </div>
       <Footer />
