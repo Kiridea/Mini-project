@@ -1,5 +1,5 @@
 import apartmentListings from '../dataset/listings.json'
-import ApartmentCard from './ApartmentCard'
+import ApartmentCard from '../components/ApartmentCard'
 import { useState } from 'react';
 import './ApartmentsList.css'
 

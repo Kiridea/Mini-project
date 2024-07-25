@@ -1,8 +1,9 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
-import ApartmentList from './components/ApartmentsList'
+import ApartmentList from './pages/ApartmentsList'
 import './App.css'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -11,7 +12,9 @@ function App() {
       <Navbar />
       <div id="main">
       <Sidebar />
-      <ApartmentList />
+      <Routes>
+        <Route path="/" element={<ApartmentList />}></Route>
+      </Routes>
       </div>
       <Footer />
       
