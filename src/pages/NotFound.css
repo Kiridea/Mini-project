@@ -1,0 +1,9 @@
+#not-found {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(118, 23, 105 ,0.6);
+    font-size: 2em;
+}
