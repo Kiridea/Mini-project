@@ -22,19 +22,33 @@ function ApartmentDetailPage() {
     
     return (
         <ul className="apartment-detail-container">
-            <div className="title-container">
-            <h1>Apartment Detail Page</h1>
-            </div>
+            
 
             <li className="card-container">
             <img src={apartment.picture_url} alt="" /> 
-            <h2>{apartment.host_location}</h2>
+            <h2>{apartment.host_location} - {apartment.host_neighbourhood}</h2>
             <h2>{apartment.name}</h2>
-            <p>{apartment.accommodates}Guest</p>
-            <p>{apartment.bedrooms}Bedrooms</p>
-            <p>{apartment.beds}Bed</p>
+            <p>{apartment.accommodates} Guest | {apartment.bedrooms} Bedrooms | {apartment.beds} Bed</p>
+            
+            
             <p>{apartment.description}</p> 
+            <p>Price: {apartment.price}</p>
+            <div className="button-container">
+            <button >Edit</button>
+            </div>
             </li>
+            
+            <div className="amenities-section">
+              
+              <h2>What this place offer</h2>
+                <div className="amenities-container">{apartment.amenities.map((eachAmeniti)=>{
+                  return <p>{eachAmeniti}</p>
+                })}</div>
+
+             
+              
+              
+            </div>
             
         
             </ul>
