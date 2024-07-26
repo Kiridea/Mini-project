@@ -15,7 +15,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <AddForm />
       <div id="main">
       <Sidebar />
       <Routes>
@@ -26,6 +25,7 @@ function App() {
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       </div>
+      <AddForm />
       <Footer />
       
       
