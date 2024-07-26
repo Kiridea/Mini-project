@@ -1,0 +1,40 @@
+
+.apartment-detail-container {
+    width: 70vw;
+    height: 100vh;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+.title-container{
+    width: 70vw;
+    height: 10vh;
+    border: red 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start ;
+    align-items: center;
+    
+}
+
+.card-container {
+    width: 60vw;
+    height: 50vh;
+    border: 1px red solid;
+    list-style: none;
+    img {
+        width: 60vw;
+        height: 40vh;
+        border-radius: 20px;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
