@@ -1,12 +1,46 @@
 import './AddForm.css'
+import { useState } from "react";
+import apartmentListings from '../dataset/listings.json'
 
-function AddForm() {
+function AddForm({ApartmentPlans, setApartmentPlans}) {
+
+    const [location, setLocation] = useState("")
+    const [neighbourhood, setNeighbourhood] = useState("")
+    const [name, setName] = useState("")
+    const [image, setImage] = useState("")
+    const [description, setDescription] = useState("")
+    const [accommodates, setAccommodates] = useState(0)
+    const [bedrooms, setBedrooms] = useState(0)
+    const [beds, setBeds] = useState(0)
+    const [price, setPrice] = useState(0)
+    
     function addApartment(event) {
         event.preventDefault();
 
         const newApartment = {
-
-        }
+            location: location,
+            neighbourhood: neighbourhood,
+            name: name,
+            image: image,
+            description: description,
+            accommodates: accommodates,
+            bedrooms: bedrooms,
+            beds: beds,
+            price: price
+        };
+        const newApartmentClone = structuredClone(ApartmentPlans)
+        newApartmentClone.unshift(newApartment)
+        setApartmentPlans(newApartmentClone)
+        
+        setLocation("");
+        setNeighbourhood("");
+        setName("");
+        setImage("");
+        setDescription("");
+        setAccommodates(0);
+        setBedrooms(0);
+        setBeds(0);
+        setPrice(0);
     }
 
     return (
@@ -16,46 +50,46 @@ function AddForm() {
                 <div id="text-labels">
                     <label className="text-inputs">
                         Location
-                        <input type="text" name="location" placeholder="Apartment location" />
+                        <input onChange={(event) => setLocation(event.target.value)} type="text" name="location" placeholder="Apartment location" />
                     </label>
                     <label className="text-inputs">
                         Neighbourhood
-                        <input type="text" name="neighbourhood" placeholder="Apartment neighbourhood" />
+                        <input onChange={(event) => setNeighbourhood(event.target.value)} type="text" name="neighbourhood" placeholder="Apartment neighbourhood" />
                     </label>
                     <label className="text-inputs">
                         Name
-                        <input type="text" name="apartmentName" placeholder="Add a listing name" />
+                        <input onChange={(event) => setName(event.target.value)} type="text" name="apartmentName" placeholder="Add a listing name" />
                     </label>
                     <label className="text-inputs">
                         Image
-                        <input type="text" name="image" placeholder="Image url" />
+                        <input onChange={(event) => setImage(event.target.value)} type="text" name="image" placeholder="Image url" />
                     </label>
                     <label className="text-inputs">
                         Description
-                        <input type="text" name="description" placeholder="Apartment Description" />
+                        <input onChange={(event) => setDescription(event.target.value)} type="text" name="description" placeholder="Apartment Description" />
                     </label>
                 </div>
                 <div id="number-labels">
                     <label className="num-inputs">
                         Accommodates
-                        <input type="number" name="accommodates" />
+                        <input onChange={(event) => setAccommodates(event.target.value)} type="number" name="accommodates" />
                     </label>
                     <label className="num-inputs">
                         Bedrooms
-                        <input type="number" name="bedrooms" />
+                        <input onChange={(event) => setBedrooms(event.target.value)} type="number" name="bedrooms" />
                     </label>
                     <label className="num-inputs">
                         Beds
-                        <input type="number" name="beds" />
+                        <input onChange={(event) => setBeds(event.target.value)} type="number" name="beds" />
                     </label>
                     <label className="num-inputs">
-                        Price
-                        <input type="number" name="price" />€
+                        Price 
+                        $<input onChange={(event) => setPrice(event.target.value)} type="number" name="price" />
                     </label>
                 </div>
 
             </div>
-            <button type="submit">Add apartment</button>
+            <button onClick={addApartment} type="submit">Add apartment</button>
         </form>
     )
 }
