@@ -30,6 +30,10 @@
 
 #project-description {
     padding: 0 4em;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 2px;
+    line-height: 27px;
 }
 
 #members-container {
