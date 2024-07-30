@@ -18,15 +18,16 @@ function AddForm({ApartmentPlans, setApartmentPlans}) {
         event.preventDefault();
 
         const newApartment = {
-            location: location,
-            neighbourhood: neighbourhood,
+            host_location: location,
+            host_neighbourhood: neighbourhood,
             name: name,
-            image: image,
+            picture_url: image,
             description: description,
             accommodates: accommodates,
             bedrooms: bedrooms,
             beds: beds,
-            price: price
+            price: price,
+            id: ApartmentPlans.length
         };
         const newApartmentClone = structuredClone(ApartmentPlans)
         newApartmentClone.unshift(newApartment)
@@ -47,7 +48,6 @@ function AddForm({ApartmentPlans, setApartmentPlans}) {
         <form>
             <h3>Add an Apartment</h3>
             <div className="inputs">
-                <div id="text-labels">
                     <label className="text-inputs">
                         Location
                         <input onChange={(event) => setLocation(event.target.value)} type="text" name="location" placeholder="Apartment location" />
@@ -60,16 +60,6 @@ function AddForm({ApartmentPlans, setApartmentPlans}) {
                         Name
                         <input onChange={(event) => setName(event.target.value)} type="text" name="apartmentName" placeholder="Add a listing name" />
                     </label>
-                    <label className="text-inputs">
-                        Image
-                        <input onChange={(event) => setImage(event.target.value)} type="text" name="image" placeholder="Image url" />
-                    </label>
-                    <label className="text-inputs">
-                        Description
-                        <input onChange={(event) => setDescription(event.target.value)} type="text" name="description" placeholder="Apartment Description" />
-                    </label>
-                </div>
-                <div id="number-labels">
                     <label className="num-inputs">
                         Accommodates
                         <input onChange={(event) => setAccommodates(event.target.value)} type="number" name="accommodates" />
@@ -84,9 +74,16 @@ function AddForm({ApartmentPlans, setApartmentPlans}) {
                     </label>
                     <label className="num-inputs">
                         Price 
-                        $<input onChange={(event) => setPrice(event.target.value)} type="number" name="price" />
+                        <input onChange={(event) => setPrice(event.target.value)} type="number" name="price" placeholder="$" />
                     </label>
-                </div>
+                    <label className="text-inputs">
+                        Image
+                        <input onChange={(event) => setImage(event.target.value)} type="text" name="image" placeholder="Image url" />
+                    </label>
+                    <label className="text-inputs">
+                        Description
+                        <textarea id="description-box" onChange={(event) => setDescription(event.target.value)} type="text" name="description" placeholder="Apartment Description" />
+                    </label>
 
             </div>
             <button onClick={addApartment} type="submit">Add apartment</button>

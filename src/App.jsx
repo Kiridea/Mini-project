@@ -20,14 +20,14 @@ function App() {
       <div id="main">
       <Sidebar />
       <Routes>
-        <Route path="/ApartmentDetailsPage/:apartment_id" element={<AparmentDetailPage/>}></Route>
+        <Route path="/ApartmentDetailsPage/:apartment_id" element={<AparmentDetailPage ApartmentPlans={ApartmentPlans} />} />
         <Route path="/" element={<ApartmentList ApartmentPlans={ApartmentPlans} setApartmentPlans={setApartmentPlans} />} />
         <Route path="/about" element={<About />}/>
         <Route path="/edit-form/:apartment_id" element={<UpdateApartment />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       </div>
-      <AddForm ApartmentPlans={ApartmentPlans} setApartmentPlans={setApartmentPlans} />
+
       <Footer />
       
       

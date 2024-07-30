@@ -2,6 +2,7 @@
 import ApartmentCard from '../components/ApartmentCard'
 import { useState } from 'react';
 import './ApartmentsList.css'
+import AddForm from '../components/AddForm';
 
 function ApartmentList({ApartmentPlans, setApartmentPlans}) {
     
@@ -18,6 +19,7 @@ function ApartmentList({ApartmentPlans, setApartmentPlans}) {
                     })
                 }
             </ul>
+            <AddForm ApartmentPlans={ApartmentPlans} setApartmentPlans={setApartmentPlans} />
         </>
     )
 }
