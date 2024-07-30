@@ -34,7 +34,7 @@ function ApartmentDetailPage() {
             <p>{apartment.description}</p> 
             <p>Price: {apartment.price}</p>
             <div className="button-container">
-            <button >Edit</button>
+            <Link to={`/edit-form/${apartment.id}`}><button >Edit</button></Link>
             </div>
             </li>
             
