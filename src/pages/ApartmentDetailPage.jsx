@@ -8,11 +8,11 @@ import "./ApartmentDetailPage.css"
 
 
 
-function ApartmentDetailPage() {
+function ApartmentDetailPage({ApartmentPlans}) {
     const { apartment_id } = useParams();
     console.log(apartment_id);
   
-    const apartment = apartmentListings.results.find((eachApartment) => {
+    const apartment = ApartmentPlans.find((eachApartment) => {
       return eachApartment.id == apartment_id;
     });
   
@@ -34,7 +34,7 @@ function ApartmentDetailPage() {
             <p>{apartment.description}</p> 
             <p>Price: {apartment.price}</p>
             <div className="button-container">
-            <button >Edit</button>
+            <Link to={`/edit-form/${apartment.id}`}><button >Edit</button></Link>
             </div>
             </li>
             
