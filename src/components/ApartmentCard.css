@@ -3,7 +3,11 @@
     width: 30%;
     height: 17rem;
     border-radius: 20px;
-    img {
+    background-color: rgba(118, 23, 105 ,0.6);
+    color: rgb(255, 255, 255);
+}
+
+.card img {
         width: 100%;
         height: 180px;
         object-fit: cover;
@@ -11,10 +15,11 @@
         border-top-right-radius: 20px;
         
         
-    }
-    
-    background-color: rgba(118, 23, 105 ,0.6);
-    color: rgb(255, 255, 255);
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
 }
 
 .info {
@@ -38,4 +43,9 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+}
+
+#delete-button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
