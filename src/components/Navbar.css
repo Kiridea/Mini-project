@@ -1,13 +1,13 @@
 
 #Navbar {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#button-container {
+/* #button-container {
     width: 5.4vw;
     height: 5vh;
     border: solid  rgba(118, 23, 105, 0.6) 1px; 
@@ -20,7 +20,7 @@
     
 
 
-}
+} */
 #button-container:hover {
     width: 5.5vw;
     -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
@@ -29,11 +29,11 @@
 }
 
 
-.hamburguer-icon {
+/* .hamburguer-icon {
     width: 50%;
     margin-left: 1px;
    
-}
+} */
 
 .default-user-icon {
     width: 40%;

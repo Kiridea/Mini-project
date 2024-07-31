@@ -7,7 +7,7 @@ function Navbar() {
         < >
         <section id="Navbar">
             <div id='button-container'>
-            <img className='hamburguer-icon' src={HamburguerMenu} alt="" />
+            {/* <img className='hamburguer-icon' src={HamburguerMenu} alt="" /> */}
             {/* <img className='default-user-icon' src={DefaultUser} alt="" /> */}
             </div>
             <h3>Habita </h3>
