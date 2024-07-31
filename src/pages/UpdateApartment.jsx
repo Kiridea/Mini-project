@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useState } from 'react';
 import apartmentListings from '../dataset/listings.json'
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import ApartmentDetailPage from "./ApartmentDetailPage";
+import { useNavigate } from 'react-router-dom';
 import './UpdateApartment.css'
 
 
-function UpdateApartment (){
+function UpdateApartment ({ApartmentPlans, setApartmentPlans}){
     const { apartment_id } = useParams();
-    console.log(apartment_id);
-    const [ApartmentPlans, setApartmentPlans] = useState(apartmentListings.results);
+    const navigate = useNavigate();
+    /* console.log(apartment_id); */
+    /* const [ApartmentPlans, setApartmentPlans] = useState(apartmentListings.results); */
   
     const apartmentToEdit = apartmentListings.results.find((eachApartment) => {
       return eachApartment.id == apartment_id;
@@ -43,12 +45,16 @@ function UpdateApartment (){
 
     }
 
-     const apartmentListingsCopy = structuredClone(apartmentListings);
-     const indexToEdit = apartmentListingsCopy.findIndex(apartmentListingsCopy.id === apartment_id)
+     const apartmentListingsCopy = structuredClone(ApartmentPlans);
+     
+     const indexToEdit = apartmentListingsCopy.findIndex((eachApartment)=>eachApartment.id == apartment_id)
       // apartmentListingsCopy
       // find the index of your apartment (by id)
-       apartmentListingsCopy[indexToEdit] = apartmentToEdit 
+      console.log(indexToEdit);
+       apartmentListingsCopy[indexToEdit] = {...apartmentListingsCopy[indexToEdit], ...apartmentToEdit} 
+       console.log(apartmentToEdit);
       setApartmentPlans(apartmentListingsCopy);
+      navigate("/"); 
     }
     
     return(
