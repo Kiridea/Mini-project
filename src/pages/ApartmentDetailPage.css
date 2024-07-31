@@ -7,6 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+   
     
     
    
@@ -33,6 +35,7 @@
     width: 50vw;
     height: 52rem;
     list-style: none;
+    margin-top: 200px;
     
     img {
         width: 50vw;
@@ -98,8 +101,8 @@
     flex-direction: row;
     
     gap: 20px;
-    margin-top: 500px;
-    position: absolute;
+    margin-top: 20px;
+    
     margin-bottom: 100px;
     p{
         transition: 300ms;
