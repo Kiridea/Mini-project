@@ -1,5 +1,5 @@
 import GithubImage from '../assets/github.svg'
-import './footer.css';
+import './Footer.css';
 
 function Footer() {
     return (
