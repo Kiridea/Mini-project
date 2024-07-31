@@ -11,7 +11,7 @@ function About() {
             <h1 id="headings">Project Description</h1>
             <section id="project-description">
                 <p>
-                Habitat is an innovative apartment listing platform designed to simplify the rental process for both <br />
+                Habita is an innovative apartment listing platform designed to simplify the rental process for both <br />
                  property owners and seekers. Created by founders and developers Aquiles Hinestrosa, Esteban <br />
                  Escalante, and Kim Delgado, our website and app make it easy for people to list and find rental <br /> 
                  properties with ease and efficiency. Whether you’re looking to rent out your apartment or find a <br /> 
