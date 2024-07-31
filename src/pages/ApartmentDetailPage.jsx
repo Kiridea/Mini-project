@@ -41,8 +41,12 @@ function ApartmentDetailPage({ApartmentPlans}) {
             <div className="amenities-section">
               
               <h2>What this place offer</h2>
-                <div className="amenities-container">{apartment.amenities.map((eachAmeniti)=>{
-                  return <p>{eachAmeniti}</p>
+                <div className="amenities-container">
+                  {apartment.amenities.map((eachAmeniti,index)=>{
+                  return (
+                  
+                  <p key={index}>{eachAmeniti}</p>)
+
                 })}</div>
 
              
