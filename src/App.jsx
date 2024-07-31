@@ -23,7 +23,7 @@ function App() {
         <Route path="/ApartmentDetailsPage/:apartment_id" element={<AparmentDetailPage ApartmentPlans={ApartmentPlans} />} />
         <Route path="/" element={<ApartmentList ApartmentPlans={ApartmentPlans} setApartmentPlans={setApartmentPlans} />} />
         <Route path="/about" element={<About />}/>
-        <Route path="/edit-form/:apartment_id" element={<UpdateApartment />} />
+        <Route path="/edit-form/:apartment_id" element={<UpdateApartment ApartmentPlans={ApartmentPlans} setApartmentPlans={setApartmentPlans} />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       </div>
