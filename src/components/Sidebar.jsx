@@ -1,4 +1,5 @@
 import './Sidebar.css'
+import { Link } from 'react-router-dom'
 
 
 function Sidebar() {
@@ -7,13 +8,8 @@ function Sidebar() {
             <h2>Menu</h2>
             <hr />
             <div id="sidebar-items">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Apartments</a>
-                <a href="">Profile</a>
-                <a href="">Items</a>
-                <a href="">Here</a>
-                <a href="">:D</a>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
             </div>
 
         </div>
