@@ -10,13 +10,13 @@ import "./ApartmentDetailPage.css"
 
 function ApartmentDetailPage({ApartmentPlans}) {
     const { apartment_id } = useParams();
-    console.log(apartment_id);
+    /* console.log(apartment_id); */
   
     const apartment = ApartmentPlans.find((eachApartment) => {
       return eachApartment.id == apartment_id;
     });
   
-    console.log(apartment);
+    /* console.log(apartment); */
 
     
     
