@@ -58,78 +58,78 @@ function UpdateApartment ({ApartmentPlans, setApartmentPlans}){
     }
     
     return(
-        <div>
         <form>
-             <span>Edit an Apartment</span>
-             <label className="line">
+             <h3>Edit an Apartment</h3>
+             <div className="inputs">
+             <label className="text-inputs">
             Apartment Picture
             <input name="image" 
             value={picture}
             onChange={(event) => setPicture(event.target.value)} 
             type="url" placeholder={apartmentToEdit.picture_url} />
           </label>
-          <label className="line">
+          <label className="text-inputs">
             Apartment Location
             <input name="Location" 
             value={location}
             onChange={(event) => setLocation(event.target.value)} 
             type="url" placeholder={apartmentToEdit.host_location} />
           </label>
-          <label className="line">
+          <label className="text-inputs">
           Apartment Neighbourhood
             <input name="neighbourhood" 
             value={neighbourhood}
             onChange={(event) => setNeighbourhood(event.target.value)} 
             type="url" placeholder={apartmentToEdit.host_neighbourhood} />
           </label>
-          <label className="line">
+          <label className="num-inputs">
           Apartment Price
             <input name="price" 
             value={price}
             onChange={(event) => setPrice(event.target.value)} 
             type="url" placeholder={apartmentToEdit.price} />
           </label>
-          <label className="line">
+          <label className="text-inputs">
           Apartment Name
             <input name="name" 
             value={name}
             onChange={(event) => setName(event.target.value)} 
             type="url" placeholder={apartmentToEdit.name} />
           </label>
-          <label className="line">
+          <label className="num-inputs">
           Apartment Guest Capacity
             <input name="guest" 
             value={guest}
             onChange={(event) => setGuest(event.target.value)} 
             type="url" placeholder={apartmentToEdit.accommodates} />
           </label>
-          <label className="line">
+          <label className="num-inputs">
           Apartment # of Bedrooms
             <input name="bedrooms" 
             value={bedrooms}
             onChange={(event) => setBedrooms(event.target.value)} 
             type="url" placeholder={apartmentToEdit.bedrooms} />
           </label>
-          <label className="line">
+          <label className="num-inputs">
           Apartment # of Beds
             <input name="beds" 
             value={beds}
             onChange={(event) => setBeds(event.target.value)} 
             type="url" placeholder={apartmentToEdit.beds} />
           </label>
-          <label className="line">
+          <label className="text-inputs">
           Apartment Description
-            <input id = "description"name="description" 
+            <textarea id="description"name="description" 
             value={description}
             onChange={(event) => setDescription(event.target.value)} 
             type="url" placeholder={apartmentToEdit.description} />
           </label>
-
+          </div>
 
           <button onClick={(e) => editApartment(e)}>Edit Apartment</button>
 
         </form>
-        </div>
+        
     )
 }
 
