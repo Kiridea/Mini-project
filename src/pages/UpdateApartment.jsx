@@ -52,7 +52,7 @@ function UpdateApartment ({ApartmentPlans, setApartmentPlans}){
       // find the index of your apartment (by id)
       console.log(indexToEdit);
        apartmentListingsCopy[indexToEdit] = {...apartmentListingsCopy[indexToEdit], ...apartmentToEdit} 
-       console.log(apartmentToEdit);
+       /* console.log(apartmentToEdit); */
       setApartmentPlans(apartmentListingsCopy);
       navigate("/"); 
     }

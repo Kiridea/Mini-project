@@ -16,7 +16,7 @@ function ApartmentDetailPage({ApartmentPlans}) {
       return eachApartment.id == apartment_id;
     });
   
-    console.log(apartment);
+    /* console.log(apartment); */
 
     
     
